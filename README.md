@@ -83,6 +83,9 @@ rules:
 - 规则ID：匹配的规则ID
 - 规则名称：匹配的规则名称
 - 匹配文本：具体匹配到的敏感信息
+<img width="1818" height="751" alt="image" src="https://github.com/user-attachments/assets/2fb8c43f-4687-4f8a-b897-6cfb29e6878c" />
+
+
 
 ## 注意事项
 
@@ -90,6 +93,7 @@ rules:
 2. 扫描结果可能包含误报，建议人工审核
 3. 对于大型项目，扫描可能需要较长时间
 4. 请及时更新配置文件中的规则，以适应新的敏感信息类型
+
 
 
 
