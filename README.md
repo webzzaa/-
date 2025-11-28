@@ -1,11 +1,8 @@
-# 免责声明
+# 小程序敏感信息扫描工具
+
+工具用于扫描反编译后的小程序代码，根据配置文件中的规则，查找其中的敏感信息（如API路径、URL、账号密码、密钥等），并将结果输出到Excel文件中。
+
 本工具仅供用于合法、正当的目的，用户应严格遵守所在国家或地区的法律法规，不得将本工具用于任何非法入侵、攻击、破坏或其他违法活动。
-用户在使用本工具进行检测、扫描或其他操作时，应确保已获得目标系统、网络或应用程序所有者的明确授权。未经授权的使用可能构成违法行为，用户需自行承担全部法律责任。
-本团队坚决反对并谴责任何非法使用本工具的行为，对于因用户违反法律法规或本免责声明而导致的任何法律责任、损失或纠纷，本团队不承担任何责任。
-
-# infohhh
-
-这是一个用Go语言编写的工具，用于扫描反编译后的小程序代码，根据配置文件中的规则，查找其中的敏感信息（如API路径、URL、账号密码、密钥等），并将结果输出到Excel文件中。
 
 ## 功能特性
 
@@ -22,20 +19,14 @@
 - 支持扫描指定目录
 - 结果输出为格式美观的Excel文件
 
-## 安装依赖
 
-确保您的系统已安装Go 1.16或更高版本，然后运行：
-
-```bash
-go mod tidy
-```
 
 ## 使用方法
 
 ### 基本用法
 
 ```bash
-go run main.go -dir 要扫描的目录路径 -output 输出的Excel文件路径
+wxinfo.exe -dir 要扫描的目录路径 -output 输出的Excel文件路径
 ```
 
 ### 参数说明
@@ -48,13 +39,13 @@ go run main.go -dir 要扫描的目录路径 -output 输出的Excel文件路径
 
 ```bash
 # 扫描当前目录，输出结果到默认文件
-go run main.go
+wxinfo.exe
 
 # 扫描指定目录，输出结果到指定文件
-go run main.go -dir ./decompiled_miniprogram -output 小程序敏感信息.xlsx
+wxinfo.exe -dir ./decompiled_miniprogram -output 小程序敏感信息.xlsx
 
 # 使用自定义配置文件
-go run main.go -config ./custom_config.yaml -dir ./scan_dir -output result.xlsx
+wxinfo.exe -config ./custom_config.yaml -dir ./scan_dir -output result.xlsx
 ```
 
 ## 配置文件说明
@@ -88,9 +79,7 @@ rules:
 - 规则ID：匹配的规则ID
 - 规则名称：匹配的规则名称
 - 匹配文本：具体匹配到的敏感信息
-<img width="1818" height="751" alt="image" src="https://github.com/user-attachments/assets/2fb8c43f-4687-4f8a-b897-6cfb29e6878c" />
-
-
+<img width="2453" height="621" alt="image" src="https://github.com/user-attachments/assets/c3baa334-eb4c-49ed-813f-f6d2533fc3b0" />
 
 ## 注意事项
 
@@ -98,6 +87,9 @@ rules:
 2. 扫描结果可能包含误报，建议人工审核
 3. 对于大型项目，扫描可能需要较长时间
 4. 请及时更新配置文件中的规则，以适应新的敏感信息类型
+
+
+
 
 
 
